@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Лапки і Серця</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Сайт притулку для тварин.">
+        <meta name="keywords" content="Безпритульні, собаки, коти, притулок, адаптація">
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/mystyle.css">
+    </head>
+    <body>
+        <header>
+            <!--Навігаційне меню-->
+            <img src="images/logo.png" alt="Логотип" width="80">
+            <h1>Лапки і Серця</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="adoption.html">Адаптація</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="contacts.html">Контакти</a></li> 
+                    <li><a href="help.html">Допомогти</a></li>                   
+                </ul>
+            </nav>
+        </header>
+
+        <main>           
+            <section>
+            <h2>Зв'яжіться з нами</h2>
+            <p>Маєте питання про усиновлення, волонтерство чи наші послуги? Ми будемо раді почути вас.</p>    
+        </section>
+
+            <section>
+                <h3>Контактна інформація</h3>
+                <ul>
+                    <li><p><b>Телефон:</b> +38 (044) 123-45-67</p></li>
+                    <li><p><b>Адреса:</b> вул. Порятунку, 123</p></li>
+                    <li><p><b>Електронна пошта:</b> adoption@lapkyisercya.org</p></li>                 
+                </ul>
+            </section>
+        </main>
+
+        <section>
+            <h3>Задати питання</h3>
+            <form action="/contact_us">
+                <p><label>Ім'я
+                    <input type="text" id="name" placeholder="Ім'я">
+                </label><br></p>
+                
+                <p><label>Пошта
+                    <input type="email" id="email" placeholder="my_e-mail@gmail.com">
+                </label><br></p>             
+
+                <p><label>Номер телефону
+                    <input type="tel" id="phone_number" placeholder="123-456-78-90">
+                </label><br></p> 
+
+                <p>Оберіть тему питання:</p>
+                <select>
+                    <option disabled>Оберіть тему питання</option>
+                    <option>Я бажаю стати волонтером</option>
+                    <option>Я бажаю завести собаку</option>
+                    <option>Я бажаю завести кота</option>
+                    <option>Послуги для домашніх улюбленців</option>
+                    <option>Технічні проблеми</option>
+                    <option>Інше</option>
+                </select>
+
+                <br><label>Введіть своє повідомлення:<br>
+                <textarea id="message" placeholder="Hello! I'd like to ask about..."></textarea>
+                </label>
+            <br>
+            <button type="submit"> Надіслати повідомлення</button>
+        </form>    
+        </section>
+
+        <footer>
+            <p>© 2025 "Лапки і Серця" Центр Порятунку Тварин.</p>
+        </footer>
+    </body>
+</html>
