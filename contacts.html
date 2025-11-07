@@ -6,7 +6,7 @@
         <meta name="description" content="Сайт притулку для тварин.">
         <meta name="keywords" content="Безпритульні, собаки, коти, притулок, адаптація">
         <link rel="icon" href="images/logo.png">
-        <link rel="stylesheet" href="css/mystyle.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
@@ -41,35 +41,44 @@
         </main>
 
         <section>
-            <h3>Задати питання</h3>
             <form action="/contact_us">
-                <p><label>Ім'я
-                    <input type="text" id="name" placeholder="Ім'я">
-                </label><br></p>
-                
-                <p><label>Пошта
-                    <input type="email" id="email" placeholder="my_e-mail@gmail.com">
-                </label><br></p>             
+                <h3>Задати питання</h3>
+                <div class="form-inputs">                    
+                    <p><label>Ім'я
+                        <input type="text" id="name" placeholder="Ім'я"
+                        required minlength="2" maxlength="40"
+                        pattern="^.{2,40}$"
+                        >
+                    </label><br></p>
+                    
+                    <p><label>Пошта
+                        <input type="email" id="email" placeholder="my_e-mail@gmail.com">
+                    </label><br></p>             
 
-                <p><label>Номер телефону
-                    <input type="tel" id="phone_number" placeholder="123-456-78-90">
-                </label><br></p> 
+                    <p><label>Номер телефону
+                        <input type="tel" id="phone_number" placeholder="+380XXXXXXXXX"
+                        required minlength="2" maxlength="40"
+                        pattern="^\+380\d{9}$"
+                        title="Введіть номер у форматі +380XXXXXXXXX"
+                        >
+                    </label><br></p> 
 
-                <p>Оберіть тему питання:</p>
-                <select>
-                    <option disabled>Оберіть тему питання</option>
-                    <option>Я бажаю стати волонтером</option>
-                    <option>Я бажаю завести собаку</option>
-                    <option>Я бажаю завести кота</option>
-                    <option>Послуги для домашніх улюбленців</option>
-                    <option>Технічні проблеми</option>
-                    <option>Інше</option>
-                </select>
+                    <p><label>Оберіть тему питання:</label></p>
+                    <select>
+                        <option disabled>Оберіть тему питання</option>
+                        <option>Я бажаю стати волонтером</option>
+                        <option>Я бажаю завести собаку</option>
+                        <option>Я бажаю завести кота</option>
+                        <option>Послуги для домашніх улюбленців</option>
+                        <option>Технічні проблеми</option>
+                        <option>Інше</option>
+                    </select>
 
-                <br><label>Введіть своє повідомлення:<br>
-                <textarea id="message" placeholder="Hello! I'd like to ask about..."></textarea>
-                </label>
-            <br>
+                    <p><label>Введіть своє повідомлення:</p>
+                    <textarea id="message" placeholder="Hello! I'd like to ask about..." rows="5" cols="40"></textarea>
+                    </label>
+                <br>
+            </div>
             <button type="submit"> Надіслати повідомлення</button>
         </form>    
         </section>

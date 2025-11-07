@@ -1,0 +1,75 @@
+header {
+    display: flex;
+    justify-content: space-between; /*логотип зліва, гамбургер-меню - справа*/
+    align-items: center;
+    background-color:#f1dbb6;
+    padding: 10px;
+    margin: 10px;
+    /*border: 2px solid;*/
+}
+.header-left {
+    display: flex;
+    align-items: center; /*вирівнюємо елементи у flexbox*/
+    gap: 20px;
+}
+#head-logo {
+    font-size: 25px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/*підвал*/
+footer {
+    /* color: white; */
+    text-align:center;
+    background-color: rgb(168, 168, 193);
+    padding: 5px;
+    margin: 20px auto;
+}
+
+/* Адаптивний дизайн
+○ Використати медіазапити (@media) або flex-підхід для забезпечення коректного відображення 
+сайту на мобільних телефонах, планшетах та настільних комп’ютерах.
+○ Налаштувати адаптивне меню навігації (наприклад, бургер-меню для мобільної версії). */
+/*медіа-запити з селекторами для мобільних телефонів*/
+@media (max-width:768px){
+    .hamburger-menu {
+        display: flex; /*в мобільній версії включаємо відображення*/
+    }   
+    nav ul {
+        display: none;        
+        flex-direction: column;
+        width: 100%;
+        /* background-color: rgb(168, 168, 193); */
+        text-align: left;
+    }
+    nav.active ul{
+        display: flex;
+    }
+    nav li{
+        margin: 0 10px;
+    }
+
+    /* при натисканні на кнопку, коли додається клас
+active змінюємо його на хрестик */
+    .hamburger-menu.active span:nth-child(1){
+        transform: rotate(45deg) translate(5px,5px);
+    }
+    .hamburger-menu.active span:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger-menu.active span:nth-child(3){
+        transform: rotate(-45deg) translate(5px,-5px);
+    }
+
+}
+@media (max-width:480px){
+ #head-logo {
+        font-size: 16px;
+    }
+}

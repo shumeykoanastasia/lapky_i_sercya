@@ -6,21 +6,29 @@
         <meta name="description" content="Сайт притулку для тварин.">
         <meta name="keywords" content="Безпритульні, собаки, коти, притулок, адаптація">
         <link rel="icon" href="images/logo.png">
-        <link rel="stylesheet" href="css/mystyle.css">
+        <link rel="stylesheet" href="css/style.css">        
     </head>
     <body>
         <header>
             <!--Навігаційне меню-->
             <img src="images/logo.png" alt="Логотип" width="80">
-            <h1>Лапки і Серця</h1>
-            <nav>
+                <div class="header-left">
+                <h1 id="head-logo">Лапки і Серця</h1>
+            </div>
+            <!--Кнопка бургер-меню-->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav-menu">                
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="adoption.html">Адаптація</a></li>
                     <li><a href="about.html">Про нас</a></li>
                     <li><a href="contacts.html">Контакти</a></li>                    
                     <li><a href="help.html">Допомогти</a></li>
-                </ul>
+                </ul>                
             </nav>
         </header>
 
@@ -32,39 +40,61 @@
             </section>
 
             <section>
-                <h2>Реєстрація</h2>
-                <p><label>Ім'я:
-                    <input type="text" id="Name" placeholder="Ваше ім'я">
-                </label><br></p>
-                <p><label>Прізвище:
-                    <input type="text" id="surname" placeholder="Ваше прізвище">
-                </label><br></p>
-                <p><label>e-mail:
-                    <input type="text" id="email" placeholder="my_e-mail@gmail.com">
-                </label></p>
-                <p><label>Login
-                    <input type="text" id="login" placeholder="Логін">
-                </label><br></p> 
-                <p><label>Password
-                    <input type="password" id="password" placeholder="Пароль">
-                </label><br></p> 
-                <button type="submit">Зареєструватись </button>
-            </section>
+                <form action="/register">
+                    <h3>Реєстрація</h3>
+                    <div class="form-inputs">
+                        <p><label>Ім'я:
+                            <input type="text" id="name" placeholder="Ваше ім'я"
+                            required minlength="2" maxlength="40"
+                            pattern="^.{2,40}$" 
+                            title="Довжина імені має бути 2-40 символів">
+                        </label><br></p>
+                        <p><label>Прізвище:
+                            <input type="text" id="surname" placeholder="Ваше прізвище"
+                            required pattern="^.{2,50}$"
+                            title="Довжина прізвища має бути 2-50 символів">
+                        </label><br></p>
+                        <p><label>e-mail:
+                            <input type="email" id="email" placeholder="my_e-mail@gmail.com"
+                            required>
+                        </label></p>
+                        <p><label>Login
+                            <input type="text" id="login" placeholder="Логін"
+                            required minlength="3" maxlength="20"
+                            pattern="^[A-Za-z0-9._-]{3,20}$"
+                            title="Логін може бути довжиною 3-20 символів, та має містити лише латинські літери, цифри, знаки, ._-">
+                        </label><br></p>
+                        <p><label>Password
+                            <input type="password" id="password" placeholder="Пароль"
+                            required minlength="8"
+                            title="Пароль має бути довжиною не менше 8 символів">
+                        </label><br></p>                         
+                    </div>
+                    <button type="submit">Зареєструватись </button>
+                </form>
 
-            <section>
-                <h2>Авторизація</h2>
-                <p><label>Login
-                    <input type="text" id="login" placeholder="Логін">
-                </label><br></p> 
-                <p><label>Password
-                    <input type="password" id="password" placeholder="Пароль">
-                </label><br></p> 
-                <button type="submit">Авторизуватися </button>
+                <form action="/register">   
+                    <h3>Авторизація</h3>
+                    <div class="form-inputs">
+                    <p><label>Login                        
+                        <input type="text" id="login" placeholder="Логін"
+                        required minlength="3" maxlength="20"
+                        pattern="^[A-Za-z0-9._-]{3,20}$"
+                            title="Логін може бути довжиною 3-20 символів, та має містити лише латинські літери, цифри, знаки, ._-">
+                    </label><br></p> 
+                    <p><label>Password
+                        <input type="password" id="password" placeholder="Пароль"
+                        required minlength="8">
+                    </label><br></p> 
+                    </div>
+                    <button type="submit">Авторизуватися </button>
+                </form>
             </section>
         </main>
 
         <footer>
             <p>© 2025 "Лапки і Серця" Центр Порятунку Тварин.</p>
         </footer>
+    <script src="js/script.js"></script>    
     </body>
 </html>

@@ -1,0 +1,89 @@
+/*навігаційне меню*/
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none ;
+}
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+nav a {
+    color: #bb5009;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*гамбургер меню*/
+.hamburger-menu {
+    display: none; /*в звичайній версії не відображаємо*/
+    flex-direction:column;
+    cursor: pointer;    
+}
+/*малюємо "кнопку" меню у вигляді 3 полос */
+.hamburger-menu span {
+    background-color: #bb5009;
+    border-radius: 2px;
+    height: 3px;
+    width: 30px;
+    margin: 4px 0;
+    transition: all 0.3s ease;    
+}
+
+/* форми */
+form {
+    background-color: rgb(168, 168, 193);
+    border: 3px solid green;
+    border-radius: 10px;
+    margin: 20px auto; 
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+/*поля форм*/
+.form-inputs{
+    text-align: left;
+}
+
+/*мітки, кнопки*/
+label {
+    color: green;
+}
+
+input, textarea, button {
+    border: 1px solid;
+    border-radius: 5px;
+    /* margin: 5px auto; */
+    padding: 2px;
+}
+/*підсвітка для input, textarea при фокусі*/
+input:focus, textarea:focus {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+/*кнопки*/
+button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;    
+}
+
+button:hover {
+    background-color: rgb(0, 100, 0);
+}
+
+/*Базова клієнтська валідація форм 
+HTML5-атрибути + стилі для відображення помилок*/
+
+input:invalid {
+    border-color:red;
+    background-color: rgb(244, 204, 204)
+}
+
+input:valid {
+    border-color:green;
+    background-color: #eaffea;
+}

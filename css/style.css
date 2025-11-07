@@ -1,0 +1,10 @@
+/* Організація стилів
+○ Використати декілька CSS-файлів (наприклад: base.css, layout.css,
+components.css).
+○ Об’єднати їх у головному файлі (наприклад, style.css) за допомогою
+директиви @import.
+○ За бажанням — застосувати препроцесори Sass/Less для спрощення
+організації коду. */
+@import url('base.css');
+@import url('components.css');
+@import url('layout.css');
