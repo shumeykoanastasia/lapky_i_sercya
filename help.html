@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="description" content="Сайт притулку для тварин.">
         <meta name="keywords" content="Безпритульні, собаки, коти, притулок, адаптація">
-        <meta name="viewport" content="width=device-width, intial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="images/logo.png">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -13,15 +13,23 @@
         <header>
             <!--Навігаційне меню-->
             <img src="images/logo.png" alt="Логотип" width="80">
-            <h1>Лапки і Серця</h1>
-            <nav>
+                <div class="header-left">
+                <h1 id="head-logo">Лапки і Серця</h1>
+            </div>
+            <!--Кнопка бургер-меню-->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav-menu">                
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="adoption.html">Адаптація</a></li>
                     <li><a href="about.html">Про нас</a></li>
-                    <li><a href="contacts.html">Контакти</a></li> 
-                    <li><a href="help.html">Допомогти</a></li>                   
-                </ul>
+                    <li><a href="contacts.html">Контакти</a></li>                    
+                    <li><a href="help.html">Допомогти</a></li>
+                </ul>                
             </nav>
         </header>
 
@@ -38,5 +46,7 @@
         <footer>
             <p>© 2025 "Лапки і Серця" Центр Порятунку Тварин.</p>
         </footer>
+
+        <script src="js/script.js"></script>   
     </body>
 </html>
